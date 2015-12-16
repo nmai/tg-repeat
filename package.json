@@ -9,8 +9,7 @@
     "start": "node index.js",
     "smartpack": "browserifyinc --cachefile=.browserify-cache src/entry.js -v -o=dist/tg-repeat.js",
     "autostart": "npm run smartpack && node index.js",
-    "debug": "nodemon -i dist/ -i babel/ -i /demo/static -x npm run start",
-    "prepublish": "npm run compile"
+    "debug": "nodemon -i dist/ -i babel/ -i /demo/static -x npm run start"
   },
   "repository": {
     "type": "git",
