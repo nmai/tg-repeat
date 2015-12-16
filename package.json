@@ -1,0 +1,51 @@
+{
+  "name": "tg-repeat",
+  "version": "0.0.1",
+  "description": "Angular directive for displaying long lists of data in a performant manner",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "compile": "babel src/ -d babel/ && browserify src/entry.js -o=dist/tg-repeat.js",
+    "start": "node index.js",
+    "smartpack": "browserifyinc --cachefile=.browserify-cache src/entry.js -v -o=dist/tg-repeat.js",
+    "autostart": "npm run smartpack && node index.js",
+    "debug": "nodemon -i dist/ -i babel/ -i /demo/static -x npm run start",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nmai/tg-repeat.git"
+  },
+  "keywords": [
+    "angular",
+    "ng-repeat",
+    "tg-repeat"
+  ],
+  "author": "Nick Mai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nmai/tg-repeat/issues"
+  },
+  "homepage": "https://github.com/nmai/tg-repeat#readme",
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "express": "^4.13.3",
+    "nodemon": "^1.8.1"
+  },
+  "dependencies": {
+    "angular": "^1.4.8"
+  },
+  "browserify-shim": {
+    "angular": "global:angular"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  }
+}
