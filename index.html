@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="demoApp">
+	<head>
+		<meta charset="utf-8">
+		<script src="utils.js"></script>
+		<script src="angular.js"></script>
+		<script src="tg-repeat.js"></script>
+		<style>
+			.table-cell {
+				width: 100%;
+				height: 40px;
+				margin: 10px;
+				background-color: aliceblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div ng-controller="DemoController">
+			<div tg-repeat="item in data">
+				<div class="table-cell">
+					{{item}}
+				</div>
+			</div>
+		</div>
+		<script src="demo.js"></script>
+	</body>
+</html>

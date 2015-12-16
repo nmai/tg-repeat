@@ -1,7 +1,7 @@
 {
   "name": "tg-repeat",
   "version": "0.0.1",
-  "description": "Angular directive for displaying long lists of data in a performant manner",
+  "description": "Angular directive for displaying long lists efficiently",
   "main": "tg-repeat.js",
   "scripts": {
     "test": "jest",
@@ -9,7 +9,7 @@
     "start": "node server.js",
     "smartpack": "browserifyinc --cachefile=.browserify-cache src/entry.js -v -o=dist/tg-repeat.js",
     "autostart": "npm run smartpack && node index.js",
-    "debug": "nodemon -i dist/ -i babel/ -i /demo/static -x npm run start"
+    "debug": "nodemon -i dist/ -i babel/ -i /tg-repeat.js -x npm run start"
   },
   "repository": {
     "type": "git",
@@ -32,7 +32,7 @@
     "nodemon": "^1.8.1"
   },
   "dependencies": {
-    "angular": "^1.4.8"
+    "angular": "~1.3.14"
   },
   "browserify-shim": {
     "angular": "global:angular"
